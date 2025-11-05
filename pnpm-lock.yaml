@@ -47,6 +47,9 @@ importers:
       '@wangeditor-next/plugin-float-image':
         specifier: ^0.1.1
         version: 0.1.12(@wangeditor-next/editor@5.6.43)(dom7@3.0.0)(slate@0.72.8)(snabbdom@3.6.2)
+      '@wangeditor-next/plugin-formula':
+        specifier: ^1.0.33
+        version: 1.0.33(@wangeditor-next/editor@5.6.43)(katex@0.16.25)(snabbdom@3.6.2)
       '@wangeditor-next/plugin-markdown':
         specifier: ^1.0.28
         version: 1.0.28(@wangeditor-next/editor@5.6.43)(dom7@3.0.0)(slate@0.72.8)(snabbdom@3.6.2)
@@ -59,6 +62,9 @@ importers:
       is-hotkey:
         specifier: ^0.2.0
         version: 0.2.0
+      katex:
+        specifier: ^0.16.25
+        version: 0.16.25
       lodash.camelcase:
         specifier: ^4.3.0
         version: 4.3.0
@@ -77,6 +83,9 @@ importers:
       lodash.toarray:
         specifier: ^4.4.0
         version: 4.4.0
+      mathlive:
+        specifier: ^0.107.1
+        version: 0.107.1
       nanoid:
         specifier: ^3.2.0
         version: 3.3.11
@@ -861,6 +870,10 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@cortex-js/compute-engine@0.29.1':
+    resolution: {integrity: sha512-bCpaGW+Th+6lrTEDom3mNInfu3hu2N79FpUuqdVyvhE1Np4O447O/1gsgqLAFqVjg58cGN0FCAxf8gXkQNF4CQ==}
+    engines: {node: '>=21.7.3', npm: '>=10.5.0'}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -1671,6 +1684,13 @@ packages:
       slate: ^0.72.0
       snabbdom: ^3.1.0
 
+  '@wangeditor-next/plugin-formula@1.0.33':
+    resolution: {integrity: sha512-YlR+yVMK59kf1MI16GRJWCbScB5LoRkyWgVCgqw3gpSpr35zhRojY30oEGIkvybVvdRAH8DEaE6LqLzbw1F/iQ==}
+    peerDependencies:
+      '@wangeditor-next/editor': 5.6.47
+      katex: ^0.16.0
+      snabbdom: ^3.6.0
+
   '@wangeditor-next/plugin-markdown@1.0.28':
     resolution: {integrity: sha512-5Z++4zxGErY02k7xC9z/nhqrVNAbNf221ddbjcSU19IfcR9uoOO5DQ264/lKsYLFjNanBom2c9gDZ5Ciyy36tQ==}
     peerDependencies:
@@ -2263,6 +2283,10 @@ packages:
 
   commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
+
+  complex-esm@2.1.1-esm1:
+    resolution: {integrity: sha512-IShBEWHILB9s7MnfyevqNGxV0A1cfcSnewL/4uPFiSxkcQL4Mm3FxJ0pXMtCXuWLjYz3lRRyk6OfkeDZcjD6nw==}
+    engines: {node: '>=16.14.2', npm: '>=8.5.0'}
 
   compressible@2.0.18:
     resolution: {integrity: sha512-AF3r7P5dWxL8MxyITRMlORQNaOA2IkAFaTr4k7BUumjPtRpGDTZpl0Pb1XCO6JeDCBdp126Cgs9sMxqSjgYyRg==}
@@ -3913,6 +3937,10 @@ packages:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
     engines: {node: '>=4.0'}
 
+  katex@0.16.25:
+    resolution: {integrity: sha512-woHRUZ/iF23GBP1dkDQMh1QBad9dmr8/PAwNA54VrSOVYgI12MAcE14TqnDdQOdzyEonGzMepYnqBMYdsoAr8Q==}
+    hasBin: true
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -4055,6 +4083,9 @@ packages:
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
+
+  mathlive@0.107.1:
+    resolution: {integrity: sha512-CaE2eTwXLGXyOu1d+dIv10Vx98qNfHv9g4pBmqOtDJRPyELxbk9RZ2pT69cTRmOk7Yai/mpSBXQT2HwD/S32uQ==}
 
   mdn-data@2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
@@ -7279,6 +7310,11 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
+  '@cortex-js/compute-engine@0.29.1':
+    dependencies:
+      complex-esm: 2.1.1-esm1
+      decimal.js: 10.6.0
+
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
@@ -8336,6 +8372,14 @@ snapshots:
       slate: 0.72.8
       snabbdom: 3.6.2
 
+  '@wangeditor-next/plugin-formula@1.0.33(@wangeditor-next/editor@5.6.43)(katex@0.16.25)(snabbdom@3.6.2)':
+    dependencies:
+      '@wangeditor-next/editor': 5.6.43
+      dom7: 4.0.6
+      katex: 0.16.25
+      nanoid: 5.1.5
+      snabbdom: 3.6.2
+
   '@wangeditor-next/plugin-markdown@1.0.28(@wangeditor-next/editor@5.6.43)(dom7@3.0.0)(slate@0.72.8)(snabbdom@3.6.2)':
     dependencies:
       '@wangeditor-next/editor': 5.6.43
@@ -9078,6 +9122,8 @@ snapshots:
   common-tags@1.8.2: {}
 
   commondir@1.0.1: {}
+
+  complex-esm@2.1.1-esm1: {}
 
   compressible@2.0.18:
     dependencies:
@@ -11247,6 +11293,10 @@ snapshots:
       object.assign: 4.1.7
       object.values: 1.2.1
 
+  katex@0.16.25:
+    dependencies:
+      commander: 8.3.0
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -11367,6 +11417,10 @@ snapshots:
       tmpl: 1.0.5
 
   math-intrinsics@1.1.0: {}
+
+  mathlive@0.107.1:
+    dependencies:
+      '@cortex-js/compute-engine': 0.29.1
 
   mdn-data@2.0.14: {}
 

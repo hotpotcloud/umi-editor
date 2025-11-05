@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 // import { Modal, Button } from 'antd'
-import MyEditor from './components/MyEditor';
+import MyEditor from "./components/MyEditor";
+import TestEditor from "./components/Math/test";
 
 const App: React.FC = () => {
   // const [isModalVisible, setIsModalVisible] = useState(false)
@@ -27,6 +28,7 @@ const App: React.FC = () => {
       </Modal> */}
 
       <MyEditor />
+      {/* <TestEditor /> */}
     </div>
   );
 };

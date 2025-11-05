@@ -1,0 +1,122 @@
+/* MathLive 数学公式编辑器样式 */
+.math-editor-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.math-editor-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 500px;
+  max-width: 80vw;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.math-editor-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.math-field-input {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.math-field-input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.math-preview {
+  border: 1px solid #f0f0f0;
+  padding: 15px;
+  border-radius: 6px;
+  min-height: 50px;
+  background-color: #fafafa;
+  margin-bottom: 20px;
+}
+
+.math-preview-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.math-editor-buttons {
+  text-align: right;
+}
+
+.math-editor-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.math-editor-button-cancel {
+  margin-right: 10px;
+  border: 1px solid #d9d9d9;
+  background-color: white;
+  color: #333;
+}
+
+.math-editor-button-cancel:hover {
+  border-color: #40a9ff;
+  color: #40a9ff;
+}
+
+.math-editor-button-confirm {
+  border: none;
+  background-color: #1890ff;
+  color: white;
+}
+
+.math-editor-button-confirm:hover {
+  background-color: #40a9ff;
+}
+
+/* 编辑器中的数学公式样式 */
+.math-formula-container {
+  display: inline-block;
+  margin: 0 2px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.math-formula-container:hover {
+  background-color: #f0f8ff;
+  border-radius: 3px;
+}
+
+.math-formula-field {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 4px 6px;
+  background-color: #fafafa;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.math-formula-field:hover {
+  border-color: #1890ff;
+  background-color: #f0f8ff;
+}

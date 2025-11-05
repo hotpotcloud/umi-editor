@@ -1,0 +1,66 @@
+/* 数学公式样式 */
+.math-formula {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 2px 4px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 3px;
+    font-family: 'KaTeX_Main', 'Times New Roman', serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.math-formula:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+/* 公式颜色和大小控制 - 通过 CSS 变量 */
+.math-formula {
+    color: var(--formula-color, inherit);
+    font-size: var(--formula-size, 1em);
+}
+
+/* KaTeX 渲染的公式继承颜色 */
+.math-formula .katex,
+.math-formula .katex * {
+    color: inherit !important;
+}
+
+/* 可选：预定义的公式样式类 */
+.math-formula-red { --formula-color: #ff4d4f; }
+.math-formula-blue { --formula-color: #1890ff; }
+.math-formula-green { --formula-color: #52c41a; }
+.math-formula-large { --formula-size: 1.5em; }
+.math-formula-small { --formula-size: 0.875em; }
+
+/* 确保数学公式在编辑器中正确显示 */
+.w-e-text-container .math-formula {
+    vertical-align: middle;
+}
+
+/* 数学公式的 LaTeX 渲染样式 */
+.math-formula .ML__latex {
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+/* MathLive 渲染的数学公式样式 */
+.ML__latex {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2px;
+}
+
+/* 编辑器中的数学公式容器 */
+.w-e-text-container .ML__latex {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* 确保数学公式在编辑器中正确对齐 */
+.w-e-text-container p .ML__latex {
+    vertical-align: baseline;
+}
