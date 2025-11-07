@@ -7,3 +7,6 @@
 /src/.umi-test
 /dist
 .swc
+/editorCode
+/src/plugins/**/node_modules
+/src/plugins/**/dist
